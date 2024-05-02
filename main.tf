@@ -56,7 +56,7 @@ data "archive_file" "spider_lambda_zip" {
 }
 
 resource "aws_lambda_function" "spider_lambda_func" {
-  filename      = "${path.module}/zip/spidern.zip"
+  filename      = "${path.module}/zip/spider.zip"
   function_name = "spider_lambda_func"
   role          = aws_iam_role.iamrole_lambda_spider.arn
   handler       = "lambda_function.lambda_handler"
